@@ -1246,7 +1246,10 @@
 		}
 
 		&.style4 {
-			background-color: transparent;
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/home/hero 7.jpg")'));
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 
 		&.style5 {
@@ -1392,9 +1395,26 @@
 				height: inherit;
 				line-height: inherit;
 
+				img {
+					float: left;
+					width: 58px;
+					padding-right: 10px;
+				}
+
 				@include breakpoint(small) {
 					font-size: 0.8em;
+
+					img {
+						width: 54px;
+					}
 				}
+
+				@include breakpoint(xsmall) {
+					span {
+						display: none;
+					}
+				}
+			
 			}
 		}
 
@@ -1476,12 +1496,16 @@
 		@include vendor('display', 'flex');
 		@include vendor('flex-direction', 'column');
 		@include vendor('justify-content', 'center');
+		@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/home/hero 7.jpg")'));
 		cursor: default;
 		height: 100vh;
 		min-height: 35em;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
 
 		h2 {
 			@include vendor('transform', 'scale(1)');
@@ -1669,7 +1693,7 @@
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1713,6 +1737,37 @@
 				}
 			}
 		}
+
+		&.about-us {
+			> header {
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/internal pages/about us.jpg")'));
+			}
+		}
+
+		&.history {
+			> header {
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/internal pages/history.jpg")'));
+			}
+		}
+
+		&.highlights {
+			> header {
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/internal pages/highlights.jpg")'));
+			}
+		}
+
+		&.about-us {
+			> header {
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/internal pages/About Us.jpg")'));
+			}
+		}
+
+		&.about-us {
+			> header {
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/internal pages/About Us.jpg")'));
+			}
+		}
+		
 	}
 
 	body.is-mobile {
@@ -1771,7 +1826,7 @@
 					}
 				}
 
-				@include breakpoint(xsmall) {
+				@include breakpoint(small) {
 					border: 0;
 					display: block;
 					line-height: 1.65em;
@@ -1794,7 +1849,7 @@
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../assets/images/banner.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1811,14 +1866,6 @@
 		&.landing {
 			#page-wrapper {
 				background: none;
-			}
-
-			#banner,
-			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
-				background-position: center center;
-				background-repeat: no-repeat;
-				background-size: cover;
 			}
 
 			#footer {
