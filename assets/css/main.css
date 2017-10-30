@@ -2035,7 +2035,7 @@ button,
   height: 100%;
   max-width: 80%;
   overflow-y: auto;
-  padding: 3em 2em;
+  padding: 2em;
   position: fixed;
   right: 0;
   top: 0;
@@ -2043,16 +2043,13 @@ button,
   z-index: 10002; }
   #menu ul {
     list-style: none;
+    margin: 0;
     padding: 0; }
-    #menu ul > li {
+    #menu ul li {
       border-top: solid 1px rgba(0, 0, 0, 0.125);
       margin: 0.5em 0 0 0;
       padding: 0.5em 0 0 0; }
-      #menu ul > li:first-child {
-        border-top: 0 !important;
-        margin-top: 0 !important;
-        padding-top: 0 !important; }
-      #menu ul > li > a {
+      #menu ul li a {
         border: 0;
         color: inherit;
         display: block;
@@ -2062,8 +2059,14 @@ button,
         text-decoration: none;
         text-transform: uppercase; }
         @media screen and (max-width: 736px) {
-          #menu ul > li > a {
+          #menu ul li a {
             line-height: 3em; } }
+  #menu > ul > li:first-child {
+    border-top: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important; }
+  #menu > ul li ul li a {
+    margin-left: 3em; }
   #menu .close {
     background-image: url("images/close.svg");
     background-position: 4.85em 1em;
